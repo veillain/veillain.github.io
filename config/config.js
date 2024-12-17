@@ -1,5 +1,5 @@
 var i = 0;
-var txt = "Welcome to boredcoder411's website! To get started, type help";
+var txt = "Welcome to Veillain's website! To get started, type help";
 var speed = 50;
 
 function typeWriter() {
@@ -17,7 +17,7 @@ function addli(text) {
 }
 
 function displayRepos() {
-  fetch('https://api.github.com/users/boredcoder411/repos')
+  fetch('https://api.github.com/users/veillain/repos')
     .then(response => response.json())
     .then(repos => {
       let repoList = '<ul>';
