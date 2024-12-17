@@ -37,6 +37,17 @@ typeWriter();
 document.getElementById("cmdline").focus();
 
 const commands = {
+  help: () => `
+    Usage: info [OPTION]...
+    OPTION
+    <ul>
+      <li><b>contact</b> displays my points of contact</li>
+      <li><b>skills</b> lists what I am good at</li>
+      <li><b>clear</b> clears the screen</li>
+      <li><b>projects</b> displays my past and current projects</li>
+      <li><b>help</b> displays this menu</li>
+    </ul>
+  `,
   projects: () => {
     addli('Fetching projects...');
     displayRepos();
@@ -47,7 +58,7 @@ const commands = {
     <ul>
       <li><a href="https://replit.com/@boredcoder411" target="_blank">replit</a></li>
       <li><a href="https://github.com/boredcoder411" target="_blank">github</a></li>
-      <li><a href="https://app.hackthebox.com/profile/534937" target="_blank">hackthebox</a></li>
+      <li><a href="https://app.hacktebox.com/profile/534937" target="_blank">hackthebox</a></li>
       <li><a href="https://x.com/boredcoder411">x</a></li>
       <li>Discord: boredcoder411</li>
     </ul>
@@ -61,16 +72,6 @@ const commands = {
       <li>Selfhosting, server maintenance</li>
       <li>Expert on ssh and network protocols</li>
       <li>The Linux kernel and it's APIs</li>
-    </ul>
-  `,
-  help: () => `
-    A list of commands are:
-    <ul>
-      <li>contact: displays my points of contact</li>
-      <li>skills: lists what I am good at</li>
-      <li>clear: clears the screen</li>
-      <li>projects: displays my past and current projects</li>
-      <li>help: displays this menu</li>
     </ul>
   `,
   clear: () => {
