@@ -38,14 +38,14 @@ document.getElementById("cmdline").focus();
 
 const commands = {
   help: () => `
-    Usage: info [OPTION]...
-    OPTION
+    Usage: [OPTION]...
     <ul>
-      <li><b>contact</b> displays my points of contact</li>
-      <li><b>skills</b> lists what I am good at</li>
-      <li><b>clear</b> clears the screen</li>
-      <li><b>projects</b> displays my past and current projects</li>
-      <li><b>help</b> displays this menu</li>
+      <li><b>Options:</b></li>
+      <li><b>   contact		</b>displays all of my contacts</li>
+      <li><b>	skills		</b>something that i good at</li>
+      <li><b>	projects	</b>displays my current and past projects</li>
+      <li><b>	help		</b>displays this menu</li>
+      <li><b>	clear		</b>clear the screen</li>
     </ul>
   `,
   projects: () => {
