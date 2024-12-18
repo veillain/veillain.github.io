@@ -37,6 +37,13 @@ typeWriter();
 document.getElementById("cmdline").focus();
 
 const commands = {
+  clear: () => {
+    document.querySelector("ul").innerHTML = "";
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    return '';
+  },
+
   help: () => `
     Usage: [OPTION]...
     <ul>
@@ -56,31 +63,17 @@ const commands = {
   contact: () => `
     My socials:
     <ul>
-      <li><a href="https://replit.com/@boredcoder411" target="_blank">replit</a></li>
-      <li><a href="https://github.com/boredcoder411" target="_blank">github</a></li>
-      <li><a href="https://app.hacktebox.com/profile/534937" target="_blank">hackthebox</a></li>
-      <li><a href="https://x.com/boredcoder411">x</a></li>
-      <li>Discord: boredcoder411</li>
+      <li><a href="https://github.com/veillain" target="_blank">github</a></li>
+      <li>Discord: veillainwertz</li>
     </ul>
   `,
   skills: () => `
     My skills:
     <ul>
-      <li>Rust</li>
-      <li>Javascript</li>
-      <li>Low-Level programming (general assembly knowledge)</li>
-      <li>Selfhosting, server maintenance</li>
-      <li>Expert on ssh and network protocols</li>
-      <li>The Linux kernel and it's APIs</li>
+      <li>Bash</li>
     </ul>
   `,
-  clear: () => {
-    document.querySelector("ul").innerHTML = "";
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    return '';
-  },
-  default: (cmd) => `Command "${cmd}" not recognized. Type help to get started.`
+    default: (cmd) => `Command "${cmd}" not recognized. Type help to get started.`
 };
 
 document.getElementById("cmdline").addEventListener("keypress", function(event) {
